@@ -1,0 +1,38 @@
+
+service: aws-stop-rds
+package:
+  include:
+   - lib/**
+  exclude:
+    - src/**
+    - test/**
+    - reports/**
+    - package.json
+    - .gitignore
+    - .babelrc
+    - .eslintrc.json
+    - README.md
+    - .gitignore
+    - .nvmrc
+    - yarn.lock
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  # you can overwrite defaults here
+  #  stage: dev
+  region: ap-southeast-2
+  iamRoleStatements:
+  - Effect: Allow
+    Action:
+        - rds:*
+    Resource: "*"
+
+functions:
+      stop:
+        handler: lib/index.stop
+        events:
+         - schedule:
+             name: stop-rds-scheduler
+             description: 'scheduled stop fn for rds instances'
+             rate: cron(0 8 ? * MON-FRI *)

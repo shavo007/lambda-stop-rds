@@ -1,0 +1,37 @@
+{
+  "name": "stop-rds-function",
+  "version": "1.0.0",
+  "description": "Lambda fn to stop rds instances based on tags",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "rimraf lib && babel src -d lib  --ignore .spec.js",
+    "lint": "eslint --fix src",
+    "deploy": "yarn build && sls deploy function -f stop  -v",
+    "logs": "sls logs -f stop ",
+    "invoke": "yarn build && sls invoke local -f stop",
+    "list:versions": "sls deploy list functions",
+    "deploy:full": "yarn build && sls deploy --verbose"
+  },
+  "keywords": [
+    "rds",
+    "aws",
+    "lambda"
+  ],
+  "author": "shane <shanelee007@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.88.0"
+  },
+  "repository": "",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0",
+    "husky": "^0.14.3",
+    "rimraf": "^2.6.1"
+  }
+}

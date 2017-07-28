@@ -1,0 +1,19 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "semi": [2, "never"],
+    "no-unexpected-multiline": 2,
+     "no-console": "off",
+     "camelcase": "off"
+  },
+  "env": {
+       "node": true,
+	   "mocha": true,
+	   "es6": true
+   },
+   "globals": {
+	   "sinon": true,
+	   "chai": true,
+	   "expect": true
+   }
+}
