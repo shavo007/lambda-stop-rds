@@ -1,6 +1,7 @@
-# RDS Stop function
+=======
+# lambda-stop-rds
+scheduled aws lambda function to stop RDS instances based on tags
 
-> stop rds instances based on tags
 
 ## Installation
 
