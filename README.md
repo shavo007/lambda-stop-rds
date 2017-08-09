@@ -56,3 +56,8 @@ To test function locally and view the results run:
 ### Update dependencies
 
 `yarn upgrade-interactive`
+
+
+## Blog post
+
+https://blog.shanelee.name/2017/07/28/how-to-save-costs-with-serverless-and-aws-lambda/
