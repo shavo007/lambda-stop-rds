@@ -2,6 +2,8 @@
 
 # Scheduled AWS Lambda function to stop RDS instances based on tags
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/shavo007/lambda-stop-rds.svg)](https://greenkeeper.io/)
+
 This function that runs as a cron job using the serverless schedule event. For more information on schedule event check out the Serverless docs on schedule.
 
 Schedule events use the rate or cron syntax.
